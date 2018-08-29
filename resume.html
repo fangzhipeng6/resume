@@ -1,0 +1,371 @@
+<!doctype html>
+
+<html>
+	<head>
+		<title>个人简历</title>
+		<meta charset="utf-8"/>
+		<link rel="stylesheet" type="text/css" href="resume.css"/>
+	</head>
+	<body>
+		<div class="container">
+			<div class="left">
+				<img src="me.jpg"/>
+				<ul>
+					<li onclick="showp()">个人信息
+						<div class="right_1">
+							<div class="right_1_1">
+								<h2>信息:</h2>
+							</div>
+							<hr/>
+							<div class="right_list_1">
+								<ul type="disc">
+									<li id="p1" style="display:none;">姓名：方志鹏</li>
+									<li id="p11"></li>
+									<li id="p2" style="display:none;">性别：男</li>
+									<li id="p21"></li>
+									<li id="p3" style="display:none;">出生年月：1996-02</li>
+									<li id="p31"></li>
+									<li id="p4" style="display:none;">手机号：15857195250</li>
+									<li id="p41"></li>
+									<li id="p5" style="display:none;">邮箱：591867196@qq.com</li>
+									<li id="p51"></li>
+									<li id="p6" style="display:none;">现居地：浙江杭州</li>
+									<li id="p61"></li>
+								</ul>
+							</div>
+							<div class="right_1_2">
+								<h2>教育:</h2>
+							</div>
+							<hr/>
+							<div class="right_list_2">
+								<ul type="disc">
+									<li id="p7" style="display:none;">学历：本科</li>
+									<li id="p71"></li>
+									<li id="p8" style="display:none;">毕业学校：浙江理工大学</li>
+									<li id="p81"></li>
+									<li id="p9" style="display:none;">毕业时间：2019-06</li>
+									<li id="p91"></li>
+									<li id="p10" style="display:none;">英语等级：四级</li>
+									<li id="p101"></li>
+								</ul>
+							</div>
+							<div class="right_1_3">
+								<h2>目标职位:</h2>
+							</div>
+							<hr/>
+							<div class="right_list_3">
+								<ul type="disc">
+									<li  id="p11" style="display:none;">大数据开发</li>
+									<li id="p111"></li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<li onclick="showword()">在校经历
+						<div class="right_2">
+							<p id="s1" style="display:none;">
+								在大一上学期和下学期的时候,曾加入过信息学院院级学生会组织,担任办公室部门的干事,负责审核旁听每周其他部门的会议,记录他们部门每周的事迹、评估成绩。
+							</p>
+							<p id="t1"></p>
+							<p id="s2" style="display:none;">							
+								在学生组织中举办过多次组织活动,写过周年庆典、全体大会以及校友返校的活动策划方案。
+							</p>
+							<p id="t2"></p>
+							<p id="s3" style="display:none;">
+								参加过就业与创业协会、计算机协会。								
+							</p>
+							<p id="t3"></p>
+						</div>				
+					</li>
+					<li onclick="shows()">职业技能
+						<div class="right_3">
+							<p id="k1" style="display:none;"><b>JAVA：</b>精通接口、抽象类、内部类、封装、继承、多态、泛型和枚举，熟悉多线程、网络、IO和异常。
+							</p>
+							<p id="k11"></p>
+							<p id="k2" style="display:none;"><b>MySQL：</b>精通DDL、DML和DQL，了解DCL和TCL。熟悉主外键、函数、存储过程、触发器、索引以及视图。熟悉JDBC，熟练运用JDBC连接数据库。
+							</p>
+							<p id="k21"></p>
+							<p id="k3" style="display:none;"><b>前端语言：</b>熟悉HTML、CSS、JAVASCRIPT，熟练使用css和div。了解JQUERY、Bootstrap和AmazeUI。</p>
+							<p id="k31"></p>
+							<p id="k4" style="display:none;">了解Struts、Hibernate以及MVC。</p>
+							<p id="k41"></p>
+							<p id="k5" style="display:none;">了解单元测试：JUnit，熟悉黑盒测试与白盒测试。</p>
+							<p id="k51"></p>
+							<p id="k6" style="display:none;"><b>项目：</b>图书管理系统、酒店管理系统、网络聊天室。</p>
+							<p id="k61"></p>
+						</div>	
+					</li>
+					<li onclick="showm();">自我评价
+						<div class="right_4">
+							<ol>
+								<li id="m1" style="display:none;">为人积极乐观，有上进心。有强烈的集体荣誉观，能为公司创造价值。</li>
+								<li id="m11"></li>
+								<li id="m2" style="display:none;">作为新人，能够以积极主动的工作态度来迎接工作中的每一个挑战。</li>
+								<li id="m21"></li>
+								<li id="m3" style="display:none;">有较强的团队配合能力和良好的责任心。</li>
+								<li id="m31"></li>
+								<li id="m4" style="display:none;">脚踏实地，善于听取他人意见，学习能力强。</li>
+								<li id="m41"></li>
+							</ol>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		
+		<script type="text/javascript">
+			function showword(){
+				var s1 = document.getElementById('s1');
+				var t1 = document.getElementById('t1');
+				var s2 = document.getElementById('s2');
+				var t2 = document.getElementById('t2');
+				var s3 = document.getElementById('s3');
+				var t3 = document.getElementById('t3');
+				var i = 0;
+				var j = 0;
+				var k = 0;
+				timer1=setInterval(function(){
+					t1.innerHTML=s1.innerHTML.substring(0,i);
+					i++;
+					if(t1.innerHTML==s1.innerHTML){
+						clearInterval(timer1);
+						timer2=setInterval(function(){
+							t2.innerHTML=s2.innerHTML.substring(0,j);
+							j++;
+							if(t2.innerHTML==s2.innerHTML){
+								clearInterval(timer2);
+								timer3=setInterval(function(){
+									t3.innerHTML=s3.innerHTML.substring(0,k);
+									k++;
+									if(t3.innerHTML==s3.innerHTML){
+										clearInterval(timer3);
+									}			
+								},50);
+							}			
+						},50);
+					}			
+				},50);		
+			}
+			
+			function showp(){
+				var p1 = document.getElementById('p1');
+				var p11 = document.getElementById('p11');
+				var p2 = document.getElementById('p2');
+				var p21 = document.getElementById('p21');
+				var p3 = document.getElementById('p3');
+				var p31 = document.getElementById('p31');
+				var p4 = document.getElementById('p4');
+				var p41 = document.getElementById('p41');
+				var p5 = document.getElementById('p5');
+				var p51 = document.getElementById('p51');
+				var p6 = document.getElementById('p6');
+				var p61 = document.getElementById('p61');
+				var p7 = document.getElementById('p7');
+				var p71 = document.getElementById('p71');
+				var p8 = document.getElementById('p8');
+				var p81 = document.getElementById('p81');
+				var p9 = document.getElementById('p9');
+				var p91 = document.getElementById('p91');
+				var p10 = document.getElementById('p10');
+				var p101 = document.getElementById('p101');
+				var p11 = document.getElementById('p11');
+				var p111 = document.getElementById('p111');
+				var i = 0;
+				var j = 0;
+				var k = 0;
+				var l = 0;
+				var m = 0;
+				var n = 0;
+				var j1 = 0;
+				var k1 = 0;
+				var l1 = 0;
+				var m1 = 0;
+				var n1 = 0;
+				timer1=setInterval(function(){
+					p11.innerHTML=p1.innerHTML.substring(0,i);
+					i++;
+					if(p1.innerHTML==p11.innerHTML){
+						clearInterval(timer1);
+						timer2=setInterval(function(){
+							p21.innerHTML=p2.innerHTML.substring(0,j);
+							j++;
+							if(p2.innerHTML==p21.innerHTML){
+								clearInterval(timer2);
+								timer3=setInterval(function(){
+									p31.innerHTML=p3.innerHTML.substring(0,k);
+									k++;
+									if(p3.innerHTML==p31.innerHTML){
+										clearInterval(timer3);
+											timer4=setInterval(function(){
+											p41.innerHTML=p4.innerHTML.substring(0,l);
+											l++;
+											if(p4.innerHTML==p41.innerHTML){
+												clearInterval(timer4);
+												timer5=setInterval(function(){
+													p51.innerHTML=p5.innerHTML.substring(0,m);
+													m++;
+													if(p5.innerHTML==p51.innerHTML){
+														clearInterval(timer5);
+														timer6=setInterval(function(){
+															p61.innerHTML=p6.innerHTML.substring(0,n);
+															n++;
+															if(p6.innerHTML==p61.innerHTML){
+																clearInterval(timer6);
+																timer7=setInterval(function(){
+																	p71.innerHTML=p7.innerHTML.substring(0,j1);
+																	j1++;
+																	if(p7.innerHTML==p71.innerHTML){
+																		clearInterval(timer7);
+																		timer8=setInterval(function(){
+																			p81.innerHTML=p8.innerHTML.substring(0,k1);
+																			k1++;
+																			if(p8.innerHTML==p81.innerHTML){
+																				clearInterval(timer8);
+																					timer9=setInterval(function(){
+																					p91.innerHTML=p9.innerHTML.substring(0,l1);
+																					l1++;
+																					if(p9.innerHTML==p91.innerHTML){
+																						clearInterval(timer9);
+																						timer10=setInterval(function(){
+																							p101.innerHTML=p10.innerHTML.substring(0,m1);
+																							m1++;
+																							if(p10.innerHTML==p101.innerHTML){
+																								clearInterval(timer10);
+																								timer11=setInterval(function(){
+																									p111.innerHTML=p11.innerHTML.substring(0,n1);
+																									n1++;
+																									if(p11.innerHTML==p111.innerHTML){
+																										clearInterval(timer11);
+																									}			
+																								},50);
+																							}			
+																						},50);
+																					}			
+																				},50);	
+																			}			
+																		},50);
+																	}			
+																},50);
+															}			
+														},50);
+													}			
+												},50);
+											}			
+										},50);	
+									}			
+								},50);
+							}			
+						},50);
+					}			
+				},50);		
+			}
+			
+			function shows(){
+				var k1 = document.getElementById('k1');
+				var k11 = document.getElementById('k11');
+				var k2 = document.getElementById('k2');
+				var k21 = document.getElementById('k21');
+				var k3 = document.getElementById('k3');
+				var k31 = document.getElementById('k31');
+				var k4 = document.getElementById('k4');
+				var k41 = document.getElementById('k41');
+				var k5 = document.getElementById('k5');
+				var k51 = document.getElementById('k51');
+				var k6 = document.getElementById('k6');
+				var k61 = document.getElementById('k61');
+				var i1 = 0;
+				var i2 = 0;
+				var i3= 0;
+				var i4 = 0;
+				var i5 = 0;
+				var i6 = 0;
+				timer1=setInterval(function(){
+					k11.innerHTML=k1.innerHTML.substring(0,i1);
+					i1++;
+					if(k11.innerHTML==k1.innerHTML){
+						clearInterval(timer1);
+					}			
+				},50);	
+				timer2=setInterval(function(){
+					k21.innerHTML=k2.innerHTML.substring(0,i2);
+					i2++;
+					if(k21.innerHTML==k2.innerHTML){
+						clearInterval(timer2);
+					}			
+				},50);	
+				timer3=setInterval(function(){
+					k31.innerHTML=k3.innerHTML.substring(0,i3);
+					i3++;
+					if(k3.innerHTML==k31.innerHTML){
+						clearInterval(timer3);
+					}			
+				},50);	
+				timer4=setInterval(function(){
+					k41.innerHTML=k4.innerHTML.substring(0,i4);
+					i4++;
+					if(k41.innerHTML==k4.innerHTML){
+						clearInterval(timer4);
+					}			
+				},50);	
+				timer5=setInterval(function(){
+					k51.innerHTML=k5.innerHTML.substring(0,i5);
+					i5++;
+					if(k5.innerHTML==k51.innerHTML){
+						clearInterval(timer5);
+					}			
+				},50);	
+				timer6=setInterval(function(){
+					k61.innerHTML=k6.innerHTML.substring(0,i6);
+					i6++;
+					if(k6.innerHTML==k61.innerHTML){
+						clearInterval(timer6);
+					}			
+				},50);	
+			}
+			
+			function showm(){
+				var m1 = document.getElementById('m1');
+				var m11 = document.getElementById('m11');
+				var m2 = document.getElementById('m2');
+				var m21 = document.getElementById('m21');
+				var m3 = document.getElementById('m3');
+				var m31 = document.getElementById('m31');
+				var m4 = document.getElementById('m4');
+				var m41 = document.getElementById('m41');
+				var i1 = 0;
+				var i2 = 0;
+				var i3= 0;
+				var i4 = 0;
+				timer1=setInterval(function(){
+					m11.innerHTML=m1.innerHTML.substring(0,i1);
+					i1++;
+					if(m11.innerHTML==m1.innerHTML){
+						clearInterval(timer1);
+					}			
+				},50);	
+				timer2=setInterval(function(){
+					m21.innerHTML=m2.innerHTML.substring(0,i2);
+					i2++;
+					if(m21.innerHTML==m2.innerHTML){
+						clearInterval(timer2);
+					}			
+				},50);	
+				timer3=setInterval(function(){
+					m31.innerHTML=m3.innerHTML.substring(0,i3);
+					i3++;
+					if(m3.innerHTML==m31.innerHTML){
+						clearInterval(timer3);
+					}			
+				},50);	
+				timer4=setInterval(function(){
+					m41.innerHTML=m4.innerHTML.substring(0,i4);
+					i4++;
+					if(m41.innerHTML==m4.innerHTML){
+						clearInterval(timer4);
+					}			
+				},50);	
+			}
+		</script>
+	</body>
+</html>
+	
